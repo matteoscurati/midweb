@@ -6,9 +6,14 @@ set :url_root, ''
 
 ignore '/templates/*'
 
-activate :asset_hash
+#set :css_dir, 'dist/stylesheets'
+#set :js_dir, 'javascripts'
+#set :images_dir, 'dist/images'
+
 activate :directory_indexes
 activate :pagination
+
+set :relative_links, true
 
 activate :external_pipeline,
   name: :webpack,
@@ -25,6 +30,8 @@ configure :build do
   activate :search_engine_sitemap,
     default_priority: 0.5,
     default_change_frequency: 'weekly'
+  activate :asset_hash
+  activate :relative_assets
 end
 
 configure :development do

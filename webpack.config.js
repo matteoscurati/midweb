@@ -7,7 +7,7 @@ const webpack = require('webpack');
 const parts = require('./webpack.parts');
 
 const PATHS = {
-  app: path.join(__dirname, '/source/javascripts/index.js'),
+  app: path.join(__dirname, '/source/javascripts/'),
   dist: path.join(__dirname, '/.tmp/dist'),
 };
 
@@ -18,7 +18,7 @@ const commonConfig = merge([
     },
     output: {
       path: PATHS.dist,
-      filename: 'javascripts/[name].js',
+      filename: 'javascripts/index.js',
     },
     plugins: [
       new webpack.ProvidePlugin({
@@ -31,7 +31,7 @@ const commonConfig = merge([
 ]);
 
 const productionConfig = merge([
-  parts.lintJavaScript({ include: PATHS.app })
+  parts.lintJavaScript({ include: PATHS.dist })
 ]);
 
 const developmentConfig = merge([
@@ -49,7 +49,7 @@ const developmentConfig = merge([
     ],
   },
   parts.lintJavaScript({
-    include: PATHS.app,
+    include: PATHS.dist,
     options: {
       emitWarning: true,
     },
