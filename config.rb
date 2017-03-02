@@ -16,7 +16,7 @@ activate :pagination
 activate :external_pipeline,
   name: :webpack,
   command: build? ?
-    "./node_modules/webpack/bin/webpack.js -p --env production" :
+    "./node_modules/webpack/bin/webpack.js -p" :
     "./node_modules/webpack/bin/webpack.js --watch -d --progress --color --env development",
   source: ".tmp/dist",
   latency: 1

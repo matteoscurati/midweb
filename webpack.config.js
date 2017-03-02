@@ -20,11 +20,12 @@ module.exports = {
     rules: [
       {
         test: /\.js$/,
+        exclude: /(node_modules|bower_components)/,
         loader: 'babel-loader',
-        options: {
-          cacheDirectory: true,
-        },
-      },
+        query: {
+          presets: ['es2015']
+        }
+      }
     ],
   },
   devtool: "source-map",
