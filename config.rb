@@ -13,12 +13,10 @@ ignore '/templates/*'
 activate :directory_indexes
 activate :pagination
 
-set :relative_links, true
-
 activate :external_pipeline,
   name: :webpack,
   command: build? ?
-    "./node_modules/webpack/bin/webpack.js --bail -p --env production" :
+    "./node_modules/webpack/bin/webpack.js -p --env production" :
     "./node_modules/webpack/bin/webpack.js --watch -d --progress --color --env development",
   source: ".tmp/dist",
   latency: 1
