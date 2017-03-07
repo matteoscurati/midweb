@@ -6,9 +6,9 @@ set :url_root, ''
 
 ignore '/templates/*'
 
-#set :css_dir, 'dist/stylesheets'
-#set :js_dir, 'javascripts'
-#set :images_dir, 'dist/images'
+set :css_dir, 'assets/stylesheets'
+set :js_dir, 'assets/javascripts'
+set :images_dir, 'assets/images'
 
 activate :directory_indexes
 activate :pagination
@@ -17,7 +17,7 @@ activate :external_pipeline,
   name: :webpack,
   command: build? ?
     "./node_modules/webpack/bin/webpack.js -p" :
-    "./node_modules/webpack/bin/webpack.js --watch -d --progress --color --env development",
+    "./node_modules/webpack/bin/webpack.js --watch -d --progress --color",
   source: ".tmp/dist",
   latency: 1
 
