@@ -4,3 +4,11 @@
 /npm-debug.log
 .tmp
 .sass-cache/
+/.bundle
+/source/dist
+/source/temp
+temp/
+/.cache
+.env
+.keep
+.tmp/

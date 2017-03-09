@@ -7,7 +7,7 @@
   "scripts": {
     "webfonts": "bemo-webfonts -s source/fonts/svg -f source/fonts -S source/stylesheets/variables/_icon-glyphs.scss"
   },
-  "author": "Cantiere Creativo s.r.l.",
+  "author": "Matteo Scurati (thx to Creativo s.r.l.)",
   "license": "ISC",
   "devDependencies": {
     "babel-core": "^6.23.1",
