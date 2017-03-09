@@ -1,10 +1,10 @@
 .DS_Store
+/.bundle
 /build
 /node_modules/*
 /npm-debug.log
 .tmp
 .sass-cache/
-/.bundle
 /source/dist
 /source/temp
 temp/

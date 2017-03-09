@@ -17,6 +17,10 @@ module Middleman
       end
 
       template 'optional/config.rb', 'config.rb'
+      template '.babelrc', '.babelrc'
+      template '.gitignore', '.gitignore'
+      template '.nvmrc', '.nvmrc'
+      template '.ruby-version', '.ruby-version'
     end
 
     def setup_bemo
