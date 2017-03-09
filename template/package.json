@@ -5,7 +5,7 @@
   "description": "Another Middleman website",
   "main": "index.js",
   "scripts": {
-    "webfonts": "bemo-webfonts -s source/fonts/svg -f source/fonts -S source/stylesheets/variables/_icon-glyphs.scss"
+    "webfonts": "bemo-webfonts -s source/assets/fonts/svg -f source/assets/fonts -S source/assets/stylesheets/variables/_icon-glyphs.scss"
   },
   "author": "Matteo Scurati (thx to Creativo s.r.l.)",
   "license": "ISC",
