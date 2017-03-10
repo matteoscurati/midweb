@@ -5,10 +5,7 @@ const webpack = require('webpack');
 
 let styles = null;
 
-const extractSass = new ExtractTextPlugin({
-    filename: "assets/stylesheets/application.css"
-});
-
+console.log("Process", process.env.NODE_ENV)
 if (process.env.NODE_ENV !== 'production') {
   styles = {
     test: /\.sass$/,
@@ -38,7 +35,7 @@ if (process.env.NODE_ENV !== 'production') {
 } else {
   styles = {
     test: /\.sass$/,
-    loader: extractSass.extract({
+    loader: ExtractTextPlugin.extract({
       use: [{
         loader: "css-loader"
       }, {
@@ -99,7 +96,8 @@ const config = {
       NODE_ENV: JSON.stringify(process.env.NODE_ENV),
       },
     }),
-    extractSass
+    new ExtractTextPlugin('assets/stylesheets/application.css')
+
   ],
 };
 

@@ -40,9 +40,9 @@ configure :build do
   activate :relative_assets
 end
 
-after_build do
-  File.rename 'build/redirects', 'build/_redirects'
-end
+#after_build do
+  #File.rename 'build/redirects', 'build/_redirects'
+#end
 
 configure :development do
   activate :livereload
