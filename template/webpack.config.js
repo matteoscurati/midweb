@@ -5,7 +5,6 @@ const webpack = require('webpack');
 
 let styles = null;
 
-console.log("Process", process.env.NODE_ENV)
 if (process.env.NODE_ENV !== 'production') {
   styles = {
     test: /\.sass$/,
