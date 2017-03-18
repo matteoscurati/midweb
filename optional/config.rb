@@ -18,6 +18,10 @@ activate :dato,
   base_url: '<%= @base_url %>'
 <%- end -%>
 
+# Slim
+Slim::Engine.set_options format: :html
+Slim::Engine.set_options pretty: false
+
 proxy "/index.html", "/templates/index.html"
 
 activate :external_pipeline,
