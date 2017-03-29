@@ -27,7 +27,7 @@ proxy "/index.html", "/templates/index.html"
 activate :external_pipeline,
   name: :webpack,
   command: build? ?
-    "./node_modules/webpack/bin/webpack.js -p" :
+    "NODE_ENV=production ./node_modules/webpack/bin/webpack.js -p" :
     "./node_modules/webpack/bin/webpack.js --watch -d --progress --color",
   source: ".tmp/dist",
   latency: 1
