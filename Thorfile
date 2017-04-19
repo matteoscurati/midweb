@@ -15,9 +15,9 @@ module Middleman
         @token = ask('Please insert your DatoCMS site read-only token:')
         @base_url = ask('What will be the base url of your site? (eg. https://www.mysite.com)')
 
-        template '.env', '.env'
       end
 
+      template '.env', '.env'
       template 'optional/config.rb', 'config.rb'
       template '.babelrc', '.babelrc'
       template '.gitignore', '.gitignore'
