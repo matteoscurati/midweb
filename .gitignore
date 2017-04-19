@@ -9,6 +9,8 @@
 /source/temp
 temp/
 /.cache
-.env
 .keep
 .tmp/
+<%- if @token -%>
+.env
+<%- end -%>
