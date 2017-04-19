@@ -11,3 +11,4 @@ temp/
 /.cache
 .keep
 .tmp/
+.env

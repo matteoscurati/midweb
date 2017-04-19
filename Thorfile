@@ -15,7 +15,6 @@ module Middleman
         @token = ask('Please insert your DatoCMS site read-only token:')
         @base_url = ask('What will be the base url of your site? (eg. https://www.mysite.com)')
 
-        run "echo '.env' >> .gitignore"
         run "echo 'DATO_API_TOKEN=#{@token}' >> .env"
       end
 
