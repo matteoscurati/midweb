@@ -17,7 +17,6 @@ module Middleman
 
       end
 
-      template '.env', '.env'
       template 'optional/config.rb', 'config.rb'
       template '.babelrc', '.babelrc'
       template '.gitignore', '.gitignore'
