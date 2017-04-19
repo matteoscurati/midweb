@@ -11,6 +11,3 @@ temp/
 /.cache
 .keep
 .tmp/
-<%- if @token -%>
-.env
-<%- end -%>
